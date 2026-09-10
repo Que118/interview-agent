@@ -100,7 +100,7 @@ Open http://localhost:3000 (local dev server)
 
 ### Production
 
-See `docs/线上化部署方案.md` for full deployment guide (Nginx + HTTPS + systemd, or static hosting).
+Production deployment: Nginx + HTTPS reverse proxy (config templates in `config/`), or static hosting.
 
 ## Project Structure
 
