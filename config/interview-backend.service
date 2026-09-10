@@ -1,0 +1,18 @@
+# [DEPLOY] Systemd 后端服务
+# 路径：/etc/systemd/system/interview-backend.service
+
+[Unit]
+Description=Interview Agent Backend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/interview-agent/src/backend
+EnvironmentFile=/opt/interview-agent/config/.env.production
+ExecStart=/usr/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

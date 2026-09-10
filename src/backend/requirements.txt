@@ -1,0 +1,30 @@
+﻿# === 核心框架 ===
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+pydantic-settings>=2.1.0
+
+# === 数据库 & 缓存 ===
+redis>=5.0.0
+celery>=5.3.0
+chromadb>=0.4.0
+
+# === LLM ===
+openai>=1.12.0          # ChatGLM 兼容 OpenAI API
+langgraph>=0.0.20
+
+# === 语音处理 ===
+openai-whisper>=20231117
+librosa>=0.10.0
+
+# === 文本处理 ===
+jieba>=0.42.1
+scikit-learn>=1.4.0
+sentence-transformers>=2.3.0
+
+# === 视觉处理 ===
+deepface>=0.0.79
+
+# === 工具 ===
+python-multipart>=0.0.6
+httpx>=0.26.0

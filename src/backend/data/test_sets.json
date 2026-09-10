@@ -1,0 +1,956 @@
+[
+  {
+    "id": "FE-001",
+    "position": "前端开发工程师",
+    "desc": "强回答 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我精通React Hooks和虚拟DOM原理，对Webpack配置优化和性能调优有三年经验，通过Code Splitting将首屏加载时间从4秒优化到1.2秒",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "FE-002",
+    "position": "前端开发工程师",
+    "desc": "弱回答 → 给提示",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "还行吧，会一点",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "FE-003",
+    "position": "前端开发工程师",
+    "desc": "中等+结构好 → 深挖弱点",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我做过一些React项目，主要是用Hooks和Redux",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "FE-004",
+    "position": "前端开发工程师",
+    "desc": "连续弱回答→给提示→结束",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "会一点HTML",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "嗯...还行",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "不太清楚",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "不知道",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "FE-005",
+    "position": "前端开发工程师",
+    "desc": "强回答+结构清晰 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "首先我通过Lighthouse定位性能瓶颈，发现FCP达到3.2秒。然后采用路由懒加载和图片WebP格式，最后配合CDN和缓存策略，将FCP优化到0.8秒。这让我深刻理解了从定位到优化的完整流程。",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "FE-006",
+    "position": "前端开发工程师",
+    "desc": "术语多但内容空 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我会React Vue Angular Webpack Vite Babel TypeScript CSS HTML JavaScript",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "FE-007",
+    "position": "前端开发工程师",
+    "desc": "正常流程4轮",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我有两年React开发经验，主要做后台管理系统",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "技术上用了Ant Design组件库，状态管理用的Redux Toolkit，路由用的React Router",
+        "expect_decision": "深挖弱点"
+      },
+      {
+        "user": "我们项目面临的主要挑战是大数据量表格渲染性能问题，通过虚拟滚动和分页加载解决了",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "FE-008",
+    "position": "前端开发工程师",
+    "desc": "满12轮自动结束",
+    "rounds": [
+      {
+        "user": "第0轮回答",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "第1轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第2轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第3轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第4轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第5轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第6轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第7轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第8轮回答",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "第9轮回答",
+        "expect_decision": "结束"
+      },
+      {
+        "user": "第10轮回答",
+        "expect_decision": "结束"
+      },
+      {
+        "user": "第11轮回答",
+        "expect_decision": "结束"
+      },
+      {
+        "user": "第12轮回答",
+        "expect_decision": "结束"
+      }
+    ]
+  },
+  {
+    "id": "FE-009",
+    "position": "前端开发工程师",
+    "desc": "中等回答6轮混合",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我主要用React和TypeScript开发",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "嗯...这个功能挺复杂的",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我们首先分析了用户需求，然后设计了组件架构，最后通过Jest保证了测试覆盖率",
+        "expect_decision": "深挖弱点"
+      },
+      {
+        "user": "对于状态管理，我倾向于用Context+useReducer处理简单场景，复杂场景用Zustand",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "性能方面主要通过React.memo和useMemo避免不必要的重渲染",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "FE-010",
+    "position": "前端开发工程师",
+    "desc": "空洞回答→给提示→转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我觉得前端挺有意思的",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我学过一些框架，做过几个小项目，感觉还行",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我们用一个React项目做了电商网站，包括商品展示和购物车功能，用了Context管理全局状态",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "BE-001",
+    "position": "后端开发工程师",
+    "desc": "强回答数据库 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我对MySQL索引优化有深入研究，理解B+Tree结构和最左前缀原则。通过慢查询日志定位问题SQL，用EXPLAIN分析执行计划，优化后查询时间从2.3秒降到80ms",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "BE-002",
+    "position": "后端开发工程师",
+    "desc": "弱回答 → 给提示",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "数据库嘛就是存数据的，增删改查",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "BE-003",
+    "position": "后端开发工程师",
+    "desc": "中等回答微服务 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我们项目用了微服务架构，主要用Spring Cloud，服务间用Feign调用",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "BE-004",
+    "position": "后端开发工程师",
+    "desc": "强回答分布式 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我们通过Redis集群实现分布式锁，用Redisson的看门狗机制自动续期。消息队列用Kafka，设置了3个分区保证并行消费，通过ACK机制保证消息不丢失",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "BE-005",
+    "position": "后端开发工程师",
+    "desc": "连续压力→结束",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "不太会",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "没做过",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "不知道",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "嗯",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "BE-006",
+    "position": "后端开发工程师",
+    "desc": "术语多但浅 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "MySQL Redis Kafka Docker Kubernetes 微服务 分布式 高可用",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "BE-007",
+    "position": "后端开发工程师",
+    "desc": "正常5轮混合",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "主要负责后端API开发，用Spring Boot框架",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "接口设计遵循RESTful规范，用JWT做无状态认证，通过AOP实现统一日志",
+        "expect_decision": "深挖弱点"
+      },
+      {
+        "user": "数据库层面做了读写分离，主库负责写入，从库负责查询，通过ShardingSphere路由",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "我们通过Prometheus采集指标，Grafana展示面板，AlertManager配置告警规则，实现了从监控到告警的闭环",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "BE-008",
+    "position": "后端开发工程师",
+    "desc": "设计模式回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我熟悉设计模式，单例工厂策略观察者都用过",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "单例模式确保一个类只有一个实例，工厂模式用来解耦对象创建",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "BE-009",
+    "position": "后端开发工程师",
+    "desc": "系统设计强回答 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "首先分析了业务需求，QPS预估在5000左右，数据量每天增长约100万条。架构上采用微服务+消息队列解耦，数据库分库分表按用户ID取模。缓存用Redis集群+Caffeine本地缓存两级架构，通过Canal监听binlog保证缓存一致性",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "BE-010",
+    "position": "后端开发工程师",
+    "desc": "空洞→提示→恢复→转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "就是写接口嘛",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我们项目日活大概50万，峰值QPS约2000，通过Redis缓存热点数据将数据库查询减少了70%，接口响应时间从平均500ms降到80ms",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "DA-001",
+    "position": "数据分析师",
+    "desc": "强回答AB测试 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我主导过多次AB测试，通过计算最小样本量确定实验周期，用卡方检验判断显著性，p<0.05认为结果可信。最近一次实验将注册转化率从12.3%提升到18.7%，置信区间95%",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "DA-002",
+    "position": "数据分析师",
+    "desc": "弱回答 → 给提示",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "数据分析就是用Excel做图表",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "DA-003",
+    "position": "数据分析师",
+    "desc": "中等SQL回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我会写SQL查询，用过Pandas处理数据",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "DA-004",
+    "position": "数据分析师",
+    "desc": "强回答留存分析 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "通过漏斗分析定位了用户流失的关键环节，发现注册流程第3步流失率达到38%。A/B测试对比了两个版本的交互方案，最终将流失率降到15%，月度留存率提升了22%",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "DA-005",
+    "position": "数据分析师",
+    "desc": "连续弱 → 结束",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "不太清楚",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "没做过相关分析",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "就是看看数据",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "嗯",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "DA-006",
+    "position": "数据分析师",
+    "desc": "术语多但浅 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "SQL Python Pandas NumPy AB测试 回归分析 聚类 时间序列",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "DA-007",
+    "position": "数据分析师",
+    "desc": "正常4轮混合",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "日常主要用SQL提取数据和Python做分析",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "通过构建用户分层模型，用RFM方法将用户分为8个群体，针对高价值用户设计了专属推荐策略",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "效果方面，推荐策略上线后高价值用户的月度消费频次提升了25%，客单价提升了12%",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "DA-008",
+    "position": "数据分析师",
+    "desc": "统计基础回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我理解基本的统计概念，均值方差标准差这些",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "DA-009",
+    "position": "数据分析师",
+    "desc": "强回答指标体系 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我负责搭建了公司的数据指标体系。从北极星指标GMV出发，拆解为流量、转化率、客单价三个一级指标，再下钻到渠道来源、页面停留时长、购物车 abandonment rate等二级指标。通过Tableau搭建了实时数据看板",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "DA-010",
+    "position": "数据分析师",
+    "desc": "空洞→恢复→深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "数据分析就是看数据",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我们会用SQL查询数据库，提取用户行为数据，然后用Pandas做数据清洗和处理",
+        "expect_decision": "深挖弱点"
+      },
+      {
+        "user": "清洗包括处理缺失值用中位数填充，异常值用IQR方法检测，然后做特征工程包括标准化和One-Hot编码",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "PM-001",
+    "position": "产品经理",
+    "desc": "强回答需求分析 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我负责过从0到1的SaaS产品。首先通过30+用户深度访谈定位核心痛点，然后用KANO模型对需求分类，MVP阶段聚焦基本型需求，上线后通过NPS调研将产品满意度从6.2提升到8.5",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "PM-002",
+    "position": "产品经理",
+    "desc": "弱回答 → 给提示",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "产品经理就是画原型图的",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "PM-003",
+    "position": "产品经理",
+    "desc": "中等回答PRD → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我会写PRD文档，用Axure画原型",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "PM-004",
+    "position": "产品经理",
+    "desc": "连续弱 → 结束",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "不太了解",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "没做过",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "嗯",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "不知道说什么",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "PM-005",
+    "position": "产品经理",
+    "desc": "强回答数据驱动 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我建立了数据驱动的产品迭代流程。每次需求评审必须有数据支撑，上线后追踪核心指标（DAU、留存率、转化率），通过AB测试验证方案效果。最近的一个改版将核心转化率提升了18%，DAU增长了12%",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "PM-006",
+    "position": "产品经理",
+    "desc": "术语多但空 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我会做用户调研需求分析竞品研究数据分析敏捷开发PRD原型设计",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "PM-007",
+    "position": "产品经理",
+    "desc": "正常5轮",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我在一家电商公司负责商家端产品，主要做订单管理和数据分析功能",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "通过调研30个商家发现他们最大的痛点是订单处理效率低，我们设计了一键发货和批量处理功能",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "上线后订单处理时间从平均3分钟降到30秒，商家满意度提升了40%",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "这个项目让我深刻理解了B端产品的设计原则：效率优先、减少操作步骤、清晰的反馈机制",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "PM-008",
+    "position": "产品经理",
+    "desc": "优先级回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我用MoSCoW方法排需求优先级",
+        "expect_decision": "转话题"
+      },
+      {
+        "user": "Must have是必须有否则产品不可用，Should have是重要但有替代方案，Could have是锦上添花，Won't have是本期不做",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "PM-009",
+    "position": "产品经理",
+    "desc": "强回答用户增长 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我通过AARRR模型系统优化了用户增长漏斗。在获客阶段通过SEO优化将自然流量提升60%，激活阶段优化新手引导将激活率从45%提升到72%，留存阶段通过个性化推送将30日留存提升15%",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "PM-010",
+    "position": "产品经理",
+    "desc": "空→恢复→深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "产品就是做功能",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我会从用户反馈和数据分析中发现需求，然后写PRD文档描述功能和交互逻辑",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "UX-001",
+    "position": "UI/UX 设计师",
+    "desc": "强回答设计系统 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我主导搭建了公司的设计系统，包含30+可复用组件、Design Token定义的颜色/字体/间距体系、以及完整的使用文档。设计系统上线后产品设计一致性提升了70%，开发效率提升了40%",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "UX-002",
+    "position": "UI/UX 设计师",
+    "desc": "弱回答 → 给提示",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "设计师就是画图的",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "UX-003",
+    "position": "UI/UX 设计师",
+    "desc": "中等Figma回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我会用Figma做界面设计，会做Auto Layout",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "UX-004",
+    "position": "UI/UX 设计师",
+    "desc": "连续弱 → 结束",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "没做过设计",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "不了解",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "嗯",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "没有",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "UX-005",
+    "position": "UI/UX 设计师",
+    "desc": "强回答可用性 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我通过可用性测试发现用户在支付流程中经常卡在第3步，原因是表单验证提示不够及时。优化后改为实时验证+内联错误提示，支付完成率从68%提升到89%。这个案例让我深刻理解了微观交互对转化率的影响",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "UX-006",
+    "position": "UI/UX 设计师",
+    "desc": "术语多但空 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "Figma Sketch 设计系统 组件化 Auto Layout 无障碍 WCAG Material Design HIG",
+        "expect_decision": "转话题"
+      }
+    ]
+  },
+  {
+    "id": "UX-007",
+    "position": "UI/UX 设计师",
+    "desc": "正常4轮混合",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我主要做移动端产品的UI设计，负责过社交和电商两个产品线",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "设计师需要同时关注视觉表现和用户体验。在电商项目中，我通过优化商品详情页的信息层级和视觉引导，将加购率提升了23%。设计上遵循了格式塔原理中的接近性和连续性原则",
+        "expect_decision": "深挖弱点"
+      },
+      {
+        "user": "也负责了设计规范的制定。我们建立了从颜色、字体、间距到组件状态的完整规范，保证iOS和Android两端的视觉一致性。规范文档用Figma的组件库方式管理，开发可以直接查看CSS代码",
+        "expect_decision": "给提示"
+      }
+    ]
+  },
+  {
+    "id": "UX-008",
+    "position": "UI/UX 设计师",
+    "desc": "设计流程回答 → 深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我的设计流程是先理解需求，然后做竞品分析，接着画线框图和高保真原型",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "UX-009",
+    "position": "UI/UX 设计师",
+    "desc": "强回答响应式 → 转话题",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "我采用移动优先的策略，从320px小屏开始设计，逐步扩展到768px平板和1440px桌面。定义了4个断点，用8px网格系统保持视觉节奏。关键页面针对不同设备做了差异化布局：移动端用底部Tab导航、桌面端用侧边栏导航",
+        "expect_decision": "深挖弱点"
+      }
+    ]
+  },
+  {
+    "id": "UX-010",
+    "position": "UI/UX 设计师",
+    "desc": "空→恢复→深挖",
+    "rounds": [
+      {
+        "user": "开始面试",
+        "expect_decision": "开场"
+      },
+      {
+        "user": "设计就是好看",
+        "expect_decision": "给提示"
+      },
+      {
+        "user": "我认为好的设计应该是兼具美观和易用性。在设计前我会先做用户研究了解目标用户的使用场景和痛点",
+        "expect_decision": "给提示"
+      }
+    ]
+  }
+]

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面试复盘报告</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f1117;color:#e1e4e8;min-height:100vh}
+.app{display:flex;min-height:100vh}
+.sidebar{width:200px;background:#161b22;border-right:1px solid #21262d;padding:20px 12px;display:flex;flex-direction:column;flex-shrink:0}
+.sidebar .logo{font-size:15px;color:#58a6ff;font-weight:700;margin-bottom:28px;padding:0 8px;display:flex;align-items:center;gap:6px}
+.nav-item{padding:9px 12px;border-radius:6px;cursor:pointer;font-size:13px;color:#8b949e;transition:all .15s;text-decoration:none;display:block}
+.nav-item:hover{background:#1c2128;color:#c9d1d9}
+.nav-item.active{background:#1f6feb22;color:#58a6ff;font-weight:600}
+.sidebar .spacer{flex:1}
+.sidebar .status{font-size:10px;color:#484f58;padding:8px 12px;display:flex;align-items:center;gap:5px}
+.sidebar .dot{width:5px;height:5px;border-radius:50%}
+.sidebar .dot.on{background:#3fb950}
+.main{flex:1;padding:36px 44px;overflow-y:auto}
+.breadcrumb{font-size:12px;color:#8b949e;margin-bottom:20px}
+.breadcrumb a{color:#58a6ff;text-decoration:none}
+.header-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
+.header-row h2{font-size:26px;color:#f0f6fc}
+.header-row .tag{background:#1f6feb22;color:#58a6ff;padding:3px 10px;border-radius:16px;font-size:11px;font-weight:600}
+.score-hero{display:grid;grid-template-columns:180px 1fr;gap:28px;background:#161b22;border:1px solid #21262d;border-radius:14px;padding:28px;margin-bottom:24px}
+.big-score{text-align:center}
+.big-score .num{font-size:64px;font-weight:800;background:linear-gradient(135deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.big-score .num.low{background:linear-gradient(135deg,#f0883e,#f85149);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.big-score .label{font-size:12px;color:#8b949e;margin-top:4px}
+.big-score .rank{font-size:12px;color:#d2991d;margin-top:6px}
+.dim-section{margin-bottom:20px}
+.dim-section h3{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #21262d}
+.dims-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+.dim-row{display:flex;align-items:center;gap:8px}
+.dim-row .name{width:100px;font-size:11px;color:#c9d1d9;text-align:right}
+.dim-row .bar-bg{flex:1;height:5px;background:#21262d;border-radius:3px;overflow:hidden}
+.dim-row .bar-fill{height:100%;border-radius:3px}
+.bar-fill.good{background:#3fb950}.bar-fill.ok{background:#d2991d}.bar-fill.weak{background:#f85149}
+.dim-row .val{width:24px;font-size:11px;font-weight:600;text-align:right}
+.radar-note{font-size:10px;color:#8b949e;display:flex;gap:16px;flex-wrap:wrap}
+.radar-note span{display:flex;align-items:center;gap:3px}
+.ldot{width:6px;height:6px;border-radius:2px;display:inline-block}
+.ldot.good{background:#3fb950}.ldot.ok{background:#d2991d}.ldot.weak{background:#f85149}
+.section{margin-bottom:28px}
+.section h3{font-size:16px;color:#f0f6fc;margin-bottom:14px}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#161b22;border:1px solid #21262d;border-radius:12px;padding:18px}
+.card.strength{border-left:3px solid #3fb950}
+.card.weakness{border-left:3px solid #f85149}
+.card h4{font-size:13px;margin-bottom:10px}
+.card ul{list-style:none;font-size:12px;color:#8b949e;line-height:1.8}
+.card ul li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.card.strength li::before{background:#3fb950}
+.card.weakness li::before{background:#f85149}
+.decision-stats{display:flex;gap:12px;flex-wrap:wrap}
+.ds-item{text-align:center;padding:10px 16px;background:#0d1117;border:1px solid #21262d;border-radius:10px}
+.ds-item .count{font-size:22px;font-weight:700;color:#c9d1d9}
+.ds-item .lbl{font-size:10px;color:#8b949e;margin-top:2px}
+.summary-text{font-size:13px;color:#8b949e;line-height:1.8}
+.rec-list{list-style:none}
+.rec-list li{padding:10px 0;border-bottom:1px solid #21262d;font-size:12px;color:#c9d1d9;display:flex;gap:10px;align-items:flex-start}
+.rec-list li:last-child{border-bottom:none}
+.rec-list .pri{font-size:14px;flex-shrink:0}
+.actions{display:flex;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;text-decoration:none}
+.btn-primary{background:#238636;color:#fff}.btn-primary:hover{opacity:.85}
+.btn-secondary{background:#21262d;color:#c9d1d9;border:1px solid #30363d}.btn-secondary:hover{opacity:.85}
+.empty-state{text-align:center;padding:80px 0;color:#8b949e}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="logo">🤖 AI面试官</div>
+  <a href="01-home.html" class="nav-item">🏠 首页</a>
+  <a href="01-home.html" class="nav-item active">📋 复盘报告</a>
+  <div class="spacer"></div>
+  <div class="status"><span class="dot on"></span>已连接</div>
+</aside>
+<main class="main" id="app">
+  <div class="empty-state"><h2>📊 加载中...</h2></div>
+</main>
+</div>
+<script>
+async function load(){
+  const sid=new URLSearchParams(location.search).get('sid')||localStorage.getItem('last_sid')||'';
+  try{
+    const r=await fetch('/api/report/'+sid);const d=await r.json();
+    if(d.error||d.http_error){document.getElementById('app').innerHTML='<div class="empty-state"><h2>未找到面试记录</h2><p style="margin:12px 0">请先完成面试</p><a href="01-home.html" class="btn btn-primary">返回首页</a></div>';return;}
+    const score=d.overall_score,grade=d.overall_grade||(score>=70?'优秀':score>=45?'中等':'需提升');
+    const ms=d.modality_scores||{text:50,voice:50,visual:50},ds=d.decision_stats||{};
+    const scoreCls=score>=70?'':'low';
+    function bar(v){return v>=65?'good':v>=40?'ok':'weak'}
+    const textDims=[{name:'关键词覆盖',score:ms.text},{name:'结构逻辑',score:ms.text},{name:'术语准确',score:ms.text},{name:'简历匹配',score:50},{name:'信息密度',score:ms.text}];
+    const voiceDims=[{name:'语速节奏',score:ms.voice},{name:'停顿检测',score:ms.voice},{name:'语调情感',score:ms.voice},{name:'流利度',score:ms.voice},{name:'音量清晰',score:ms.voice}];
+    const visualDims=[{name:'眼神注意',score:ms.visual},{name:'面部表情',score:ms.visual},{name:'头部姿态',score:ms.visual},{name:'形象背景',score:ms.visual}];
+    const decLabels={开场:'👋 开场',深挖弱点:'🔍 深挖',转话题:'🔄 转题',给提示:'💡 提示',结束:'🏁 结束'};
+    let h='';
+    h+='<div class="breadcrumb"><a href="01-home.html">首页</a> / 复盘报告</div>';
+    h+='<div class="header-row"><h2>'+(d.position||'面试')+' · 复盘报告</h2><div><span class="tag">'+(d.date||'')+'</span><span class="tag" style="margin-left:6px">共 '+(d.total_turns||0)+' 轮</span></div></div>';
+    h+='<div class="score-hero"><div class="big-score"><div class="num '+scoreCls+'">'+score.toFixed(0)+'</div><div class="label">综合评分 / 100</div><div class="rank">评级：'+grade+'</div></div><div>';
+    h+='<div class="dim-section"><h3>📝 文本层 (权重60%)</h3><div class="dims-grid">';
+    textDims.forEach(d=>{h+='<div class="dim-row"><span class="name">'+d.name+'</span><div class="bar-bg"><div class="bar-fill '+bar(d.score)+'" style="width:'+d.score+'%"></div></div><span class="val">'+d.score.toFixed(0)+'</span></div>';});
+    h+='</div></div><div class="dim-section"><h3>🎤 语音层 (权重25%)</h3><div class="dims-grid">';
+    voiceDims.forEach(d=>{h+='<div class="dim-row"><span class="name">'+d.name+'</span><div class="bar-bg"><div class="bar-fill '+bar(d.score)+'" style="width:'+d.score+'%"></div></div><span class="val">'+d.score.toFixed(0)+'</span></div>';});
+    h+='</div></div><div class="dim-section"><h3>📷 视觉层 (权重15%)</h3><div class="dims-grid">';
+    visualDims.forEach(d=>{h+='<div class="dim-row"><span class="name">'+d.name+'</span><div class="bar-bg"><div class="bar-fill '+bar(d.score)+'" style="width:'+d.score+'%"></div></div><span class="val">'+d.score.toFixed(0)+'</span></div>';});
+    h+='</div></div><div class="radar-note"><span><span class="ldot good"></span> 优秀 (65+)</span><span><span class="ldot ok"></span> 一般 (40-64)</span><span><span class="ldot weak"></span> 薄弱 (<40)</span></div>';
+    h+='</div></div>';
+    if(Object.keys(ds).length){h+='<div class="section"><h3>📋 决策统计</h3><div class="decision-stats">';for(const[k,v]of Object.entries(ds))h+='<div class="ds-item"><div class="count">'+v+'</div><div class="lbl">'+(decLabels[k]||k)+'</div></div>';h+='</div></div>';}
+    const allDims=[...textDims,...voiceDims,...visualDims];
+    const strong=allDims.filter(d=>d.score>=65).sort((a,b)=>b.score-a.score).slice(0,5);
+    const weak=allDims.filter(d=>d.score<40).sort((a,b)=>a.score-b.score).slice(0,5);
+    h+='<div class="section"><h3>📋 能力分析</h3><div class="card-grid"><div class="card strength"><h4>✅ 表现较好</h4><ul>';
+    if(strong.length)strong.forEach(d=>{h+='<li>'+d.name+' — '+d.score.toFixed(0)+'分</li>'});else h+='<li>各项均衡</li>';
+    h+='</ul></div><div class="card weakness"><h4>⚠️ 需要加强</h4><ul>';
+    if(weak.length)weak.forEach(d=>{h+='<li>'+d.name+' — '+d.score.toFixed(0)+'分</li>'});else h+='<li>无显著薄弱</li>';
+    h+='</ul></div></div></div>';
+    if(d.recommendations&&d.recommendations.length){h+='<div class="section"><h3>📚 学习建议</h3><ul class="rec-list">';d.recommendations.forEach((r,i)=>{h+='<li><span class="pri">'+(['🔴','🟡','🟢','🔵'][i]||'📌')+'</span>'+r+'</li>';});h+='</ul></div>';}
+    if(d.summary){h+='<div class="section"><h3>💬 综合评语</h3><div class="card"><p class="summary-text">'+d.summary+'</p></div></div>';}
+    h+='<div class="actions"><a href="02-interview.html" class="btn btn-primary">🔄 再来一次</a><a href="01-home.html" class="btn btn-secondary">📋 返回首页</a></div>';
+    document.getElementById('app').innerHTML=h;
+  }catch(e){document.getElementById('app').innerHTML='<div class="empty-state"><h2>无法连接后端</h2><p style="margin:12px 0">请确认服务已启动</p><button onclick="location.reload()" class="btn btn-primary">重试</button></div>';}
+}
+load();
+</script>
+</body>
+</html>
+
