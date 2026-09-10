@@ -68,12 +68,16 @@ Candidate answers
 
 ## Getting Started
 
+> **Live demo:** https://agent-interview.cn — no installation needed.
+>
+> The instructions below are for **local development only** (after cloning the repo). The `localhost` addresses only work on your own machine.
+
 ### Prerequisites
 
 - Python 3.10+
 - Node.js 18+
 
-### Backend
+### Backend (local dev)
 
 ```bash
 cd src/backend
@@ -82,9 +86,9 @@ cp ../../config/.env.example ../../config/.env  # adjust if needed
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-API docs: http://localhost:8000/docs
+Local API docs: http://localhost:8000/docs
 
-### Frontend
+### Frontend (local dev)
 
 ```bash
 cd src/frontend
@@ -92,7 +96,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open http://localhost:3000 (local dev server)
 
 ### Production
 
