@@ -1,8 +1,8 @@
-# Multimodal Agent Interview Evaluation System
+# 基于多模态 Agent 的智能面试评估系统
 
-> 基于多模态 Agent 的智能面试评估系统 | Multimodal Agent-Powered AI Interviewer
+> Multimodal Agent-Powered Intelligent Interview Evaluation System
 
-**Live Demo:** https://agent-interview.cn
+**在线演示 Live Demo:** https://agent-interview.cn
 
 An AI interviewer that adapts to the candidate in real time — instead of reading from a fixed question bank, it analyzes the candidate's text, voice, and facial signals across 18 evaluation dimensions, then decides on its own whether to dig deeper, switch topics, give hints, or end the interview.
 
