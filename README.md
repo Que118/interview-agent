@@ -130,7 +130,7 @@ src/
 data/
 ├── knowledge_base.json        # 501 knowledge items
 └── test_sets.json             # 50 multi-turn test cases
-docs/                          # design docs, thesis, deployment guide
+config/                        # nginx.conf + systemd service templates
 ```
 
 ## License
